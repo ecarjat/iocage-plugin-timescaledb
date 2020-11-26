@@ -1,0 +1,10 @@
+. /etc/rc.subr
+
+name="promscale"
+rcvar="promscale_enable"
+
+load_rc_config $name
+
+command="/usr/local/bin/promscale"
+
+run_rc_command "$1"
