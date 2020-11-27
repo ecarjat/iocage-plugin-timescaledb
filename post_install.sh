@@ -1,6 +1,7 @@
 #!/bin/sh
 # Enable postgresql
 sysrc postgresql_enable=YES
+/usr/local/etc/rc.d/postgresql initdb
 
 git clone https://github.com/timescale/promscale.git
 cd ./promscale
