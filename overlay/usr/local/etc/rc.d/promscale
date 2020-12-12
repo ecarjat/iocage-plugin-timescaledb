@@ -1,10 +1,11 @@
 . /etc/rc.subr
 
 name="promscale"
-rcvar="promscale_enable"
+rcvar=${name}_enable
 
 load_rc_config $name
 
-command="/usr/local/bin/promscale -db-name promscale -db-ssl-mode 'allow'"
+command=/usr/local/bin/${name}
+command_args="-db-name promscale -db-ssl-mode 'allow'"
 
 run_rc_command "$1"
