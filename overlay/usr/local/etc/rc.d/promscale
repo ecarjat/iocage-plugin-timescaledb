@@ -1,3 +1,7 @@
+# PROVIDE: promscale
+# REQUIRE: postgresql
+# KEYWORD: shutdown
+
 . /etc/rc.subr
 
 name="promscale"
