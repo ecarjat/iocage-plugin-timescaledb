@@ -14,3 +14,5 @@ ln -s /usr/local/include/libintl.h /usr/local/include/postgresql/server/libintl.
 gmake && gmake install
 
 sysrc promscale_enable=YES
+
+echo "0,30 * * * * /usr/local/bin/prom-execute-maintenance.sh" | crontab -
